@@ -1,14 +1,23 @@
-# So long
+# :joystick: So Long
 
-[![forthebadge](https://forthebadge.com/images/badges/made-with-c.svg)](https://forthebadge.com)
+<div align=center>
 
-[![wakatime](https://wakatime.com/badge/user/0c29d5b3-c30b-4e1a-ad07-2da3bd4f7e05/project/bfe8f4a5-0213-412e-aaff-a34c96f9d5a7.svg)](https://wakatime.com/badge/user/0c29d5b3-c30b-4e1a-ad07-2da3bd4f7e05/project/bfe8f4a5-0213-412e-aaff-a34c96f9d5a7)
+  ![badge](https://raw.githubusercontent.com/angelamcosta/angelamcosta/main/42_badges/so_longe.png)
+
+  [![forthebadge](https://forthebadge.com/images/badges/made-with-c.svg)](https://forthebadge.com)  [![forthebadge](https://forthebadge.com/images/badges/built-by-codebabes.svg)](https://forthebadge.com)
+</div>
+
+<div align=center>
+  <img alt="GitHub Language Count" src="https://img.shields.io/github/languages/count/angelamcosta/so_long" /> <img alt="GitHub Top Language" src="https://img.shields.io/github/languages/top/angelamcosta/so_long" /> <img alt="GitHub Contributors" src="https://img.shields.io/github/contributors/angelamcosta/so_long" /> <img alt="GitHub Last Commit" src="https://img.shields.io/github/last-commit/angelamcosta/so_long" /> <img alt="Github License" src="https://img.shields.io/github/license/angelamcosta/so_long" /> <a href="https://wakatime.com/badge/user/0c29d5b3-c30b-4e1a-ad07-2da3bd4f7e05/project/bfe8f4a5-0213-412e-aaff-a34c96f9d5a7"><img src="https://wakatime.com/badge/user/0c29d5b3-c30b-4e1a-ad07-2da3bd4f7e05/project/bfe8f4a5-0213-412e-aaff-a34c96f9d5a7.svg" alt="wakatime"></a>
+</div>
+
+
 
 ## Table of Contents
 
 - [Introduction](#introduction)
 - [Mandatory part](#mandatory-part)
-  - [So long](#so-long-1)
+  - [So long](#so-long)
   - [Bonus part](#bonus-part)
 - [Tasks](#tasks)
 
