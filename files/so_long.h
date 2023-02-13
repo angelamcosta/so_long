@@ -6,7 +6,7 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 15:15:07 by anlima            #+#    #+#             */
-/*   Updated: 2023/02/13 15:13:01 by anlima           ###   ########.fr       */
+/*   Updated: 2023/02/13 15:58:47 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,8 @@ typedef struct s_win
 {
 	void	*mlx;
 	void	*mlx_win;
-	int		pos;
+	int		x;
+	int		y;
 	void	*img;
 	int		img_width;
 	int		img_height;
