@@ -6,7 +6,7 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 16:03:24 by anlima            #+#    #+#             */
-/*   Updated: 2023/02/16 16:48:28 by anlima           ###   ########.fr       */
+/*   Updated: 2023/02/16 23:53:11 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,6 @@ t_win	*create_win(void)
 
 int	events(int keycode)
 {
-	// if (keycode)
-	// 	printf("keycode: %d\n", keycode);
 	if (keycode == 65307)
 	{
 		mlx_destroy_window(create_win()->mlx, create_win()->mlx_win);
@@ -39,7 +37,6 @@ int	events(int keycode)
 			create_win()->y += 32;
 		if ((keycode == 65362  || keycode == 119) && (create_win()->y - 32 >= 32))
 			create_win()->y -= 32;
-		mlx_clear_window(create_win()->mlx, create_win()->mlx_win);
 		create_background();
 		mlx_put_image_to_window(create_win()->mlx, create_win()->mlx_win, create_win()->img, create_win()->x, create_win()->y);
 	}
@@ -51,17 +48,15 @@ void	create_background(void)
 	int	i;
 	int	j;
 
-	i = 0;
 	j = 0;
-	mlx_clear_window(create_win()->mlx, create_win()->mlx_win);
 	while (j < 481)
 	{
+		i = 0;
 		while (i < 481)
 		{
 			mlx_put_image_to_window(create_win()->mlx, create_win()->mlx_win, create_win()->background, i, j);
 			i += 32;
 		}
-		i = 0;
 		j += 32;
 	}
 	mlx_put_image_to_window(create_win()->mlx, create_win()->mlx_win, create_win()->img, create_win()->x, create_win()->y);
