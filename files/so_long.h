@@ -6,7 +6,7 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 15:15:07 by anlima            #+#    #+#             */
-/*   Updated: 2023/02/13 16:57:34 by anlima           ###   ########.fr       */
+/*   Updated: 2023/02/16 18:40:44 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,8 @@
 # ifndef  BUFFER_SIZE
 #  define  BUFFER_SIZE 1
 # endif
-
-char	*get_next_line(int fd);
-char	*ft_strjoin(char *s1, char *s2);
-size_t	ft_strlen(char *s);
-int		ft_clean(char *str);
+# define CHAR_IMG "../assets/frog.xpm"
+# define BCKGROUND "../assets/grass.xpm"
 
 typedef struct s_win
 {
@@ -34,12 +31,20 @@ typedef struct s_win
 	int		x;
 	int		y;
 	void	*img;
-	int		img_width;
-	int		img_height;
+	void	*background;
 	int		win_width;
 	int		win_height;
+	char	**map;
 }				t_win;
 
 t_win	*create_win(void);
+int		events(int keycode);
+void	create_background(void);
+char	*get_next_line(int fd);
+char	*ft_strjoin(char *s1, char *s2);
+size_t	ft_strlen(char *s);
+int		ft_clean(char *str);
+int		is_empty(int fd);
+int		verify_map(char *file_name);
 
 #endif
