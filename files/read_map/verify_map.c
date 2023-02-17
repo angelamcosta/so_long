@@ -6,7 +6,7 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 16:50:44 by anlima            #+#    #+#             */
-/*   Updated: 2023/02/16 18:52:03 by anlima           ###   ########.fr       */
+/*   Updated: 2023/02/17 15:30:27 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,19 @@ int	is_empty(int fd)
 
 int	is_valid(void)
 {
-	int	i;
+	int		i;
+	size_t	j;
 
 	i = 0;
+	if (create_win()->map && create_win()->map[i])
+		j = ft_strlen(create_win()->map[i++]);
 	while (create_win()->map && create_win()->map[i])
-		printf("%s", create_win()->map[i++]);
+	{
+		if (!create_win()->map[i + 1])
+			j--;
+		if (ft_strlen(create_win()->map[i++]) != j)
+			return (0);
+	}
 	return (1);
 }
 
@@ -47,7 +55,7 @@ int	verify_map(char *file_name)
 
 	fd = open(file_name, O_RDONLY);
 	cont = is_empty(fd);
-	if (!cont)
+	if (!cont || cont < 3)
 		return (0);
 	create_win()->map = (char **)malloc(sizeof(char *) * (cont + 1));
 	if (!create_win()->map)
