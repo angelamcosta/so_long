@@ -6,11 +6,32 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 16:50:44 by anlima            #+#    #+#             */
-/*   Updated: 2023/03/13 21:16:48 by anlima           ###   ########.fr       */
+/*   Updated: 2023/03/13 22:01:51 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../so_long.h"
+
+int	valid_chars(void)
+{
+	if (create_win()->c < 1 || create_win()->p != 1 || create_win()->e != 1)
+		return (0);
+	return (1);
+}
+
+int	check_chars(char c)
+{
+	if (c == 'C')
+		create_win()->c += 1;
+	else if (c == 'P' && create_win()->p == 0)
+		create_win()->p += 1;
+	else if (c == 'E' && create_win()->e == 0)
+		create_win()->e += 1;
+	else if ((c != '1' && c != '0') || (c == 'P' && create_win()->p == 1)
+		|| (c == 'E' && create_win()->e == 1))
+		return (0);
+	return (1);
+}
 
 int	is_empty(int fd)
 {
@@ -52,10 +73,12 @@ int	is_valid(void)
 				return (0);
 			if ((k == 0 || k == (j - 2)) && create_win()->map[i][k] != '1')
 				return (0);
+			if (!check_chars(create_win()->map[i][k]))
+				return (0);
 		}
 		i++;
 	}
-	return (1);
+	return (valid_chars());
 }
 
 int	verify_map(char *filename)
