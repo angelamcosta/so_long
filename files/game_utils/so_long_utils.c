@@ -6,7 +6,7 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 16:03:24 by anlima            #+#    #+#             */
-/*   Updated: 2023/02/16 23:53:11 by anlima           ###   ########.fr       */
+/*   Updated: 2023/03/14 15:36:23 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,13 @@ t_win	*create_win(void)
 	static t_win	win;
 
 	return (&win);
+}
+
+t_map	*create_map(void)
+{
+	static t_map	map;
+
+	return (&map);
 }
 
 int	events(int keycode)
