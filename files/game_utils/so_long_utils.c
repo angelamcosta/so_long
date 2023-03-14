@@ -6,11 +6,21 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 16:03:24 by anlima            #+#    #+#             */
-/*   Updated: 2023/03/14 15:36:23 by anlima           ###   ########.fr       */
+/*   Updated: 2023/03/14 16:33:23 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../so_long.h"
+
+void	ft_putnbr(long nbr)
+{
+	char	temp;
+
+	if (nbr / 10 > 0)
+		ft_putnbr(nbr / 10);
+	temp = nbr % 10 + '0';
+	write(1, &temp, 1);
+}
 
 t_win	*create_win(void)
 {
@@ -45,6 +55,9 @@ int	events(int keycode)
 		if ((keycode == 65362  || keycode == 119) && (create_win()->y - 32 >= 32))
 			create_win()->y -= 32;
 		create_background();
+		create_win()->moves += 1;
+		ft_putnbr(create_win()->moves);
+		write(1, " moves\n", 7);
 		mlx_put_image_to_window(create_win()->mlx, create_win()->mlx_win, create_win()->img, create_win()->x, create_win()->y);
 	}
 	return (0);
