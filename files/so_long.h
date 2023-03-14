@@ -6,7 +6,7 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 15:15:07 by anlima            #+#    #+#             */
-/*   Updated: 2023/03/14 16:34:00 by anlima           ###   ########.fr       */
+/*   Updated: 2023/03/14 16:47:40 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,7 @@ void	ft_putnbr(long nbr);
 t_win	*create_win(void);
 t_map	*create_map(void);
 int		events(int keycode);
+int		print_moves(void);
 void	create_background(void);
 char	*ft_strjoin(char *s1, char *s2);
 size_t	ft_strlen(char *s);
