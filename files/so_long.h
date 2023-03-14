@@ -6,7 +6,7 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 15:15:07 by anlima            #+#    #+#             */
-/*   Updated: 2023/03/14 16:12:06 by anlima           ###   ########.fr       */
+/*   Updated: 2023/03/14 16:34:00 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ typedef struct s_win
 	void	*background;
 	int		win_width;
 	int		win_height;
+	int		moves;
 }				t_win;
 
 typedef struct s_map
@@ -50,6 +51,7 @@ typedef struct s_map
 	int		j;
 }				t_map;
 
+void	ft_putnbr(long nbr);
 t_win	*create_win(void);
 t_map	*create_map(void);
 int		events(int keycode);
