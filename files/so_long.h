@@ -6,7 +6,7 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 15:15:07 by anlima            #+#    #+#             */
-/*   Updated: 2023/03/15 13:43:48 by anlima           ###   ########.fr       */
+/*   Updated: 2023/03/15 13:49:29 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,8 @@ typedef struct s_map
 	int		e_count;
 	int		i;
 	int		j;
+	int		x;
+	int		y;
 }				t_map;
 
 void	ft_putnbr(long nbr);
