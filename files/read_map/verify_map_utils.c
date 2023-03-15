@@ -6,7 +6,7 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 15:40:57 by anlima            #+#    #+#             */
-/*   Updated: 2023/03/14 16:25:58 by anlima           ###   ########.fr       */
+/*   Updated: 2023/03/15 13:49:14 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,6 +102,7 @@ int	is_valid(void)
 
 	i = 0;
 	j = ft_strlen(create_map()->map[i]);
+	create_map()->x = j - 1;
 	while (create_map()->map && create_map()->map[i])
 	{
 		k = j - 1;

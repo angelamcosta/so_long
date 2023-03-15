@@ -6,7 +6,7 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 16:50:44 by anlima            #+#    #+#             */
-/*   Updated: 2023/03/14 15:43:43 by anlima           ###   ########.fr       */
+/*   Updated: 2023/03/15 13:49:20 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ int	verify_map(char *filename)
 
 	fd = open(filename, O_RDONLY);
 	cont = is_empty(fd);
+	create_map()->y = cont;
 	if (!cont || cont < 3)
 		return (0);
 	create_map()->map = (char **)malloc(sizeof(char *) * (cont + 1));
