@@ -6,7 +6,7 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 15:15:07 by anlima            #+#    #+#             */
-/*   Updated: 2023/03/14 16:47:40 by anlima           ###   ########.fr       */
+/*   Updated: 2023/03/15 13:43:48 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 # include <unistd.h>
 # ifndef  BUFFER_SIZE
 #  define  BUFFER_SIZE 1
+#  define  PIXEL_SIZE 32
 # endif
 # define CHAR_IMG "../assets/frog.xpm"
 # define BCKGROUND "../assets/grass.xpm"
