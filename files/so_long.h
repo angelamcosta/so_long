@@ -6,7 +6,7 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 15:15:07 by anlima            #+#    #+#             */
-/*   Updated: 2023/03/15 13:49:29 by anlima           ###   ########.fr       */
+/*   Updated: 2023/03/15 15:13:15 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,10 @@
 # include <unistd.h>
 # ifndef  BUFFER_SIZE
 #  define  BUFFER_SIZE 1
-#  define  PIXEL_SIZE 32
 # endif
-# define CHAR_IMG "../assets/frog.xpm"
+# define PIXEL_SIZE 32
+# define CHAR_IMG "../assets/pidgeon1.xpm"
+# define COLLECTIBLE "../assets/crackers.xpm"
 # define BCKGROUND "../assets/grass.xpm"
 
 typedef struct s_win
