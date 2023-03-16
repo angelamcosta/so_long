@@ -6,7 +6,7 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 15:15:07 by anlima            #+#    #+#             */
-/*   Updated: 2023/03/15 15:13:15 by anlima           ###   ########.fr       */
+/*   Updated: 2023/03/16 15:04:05 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,23 +25,28 @@
 # define CHAR_IMG "../assets/pidgeon1.xpm"
 # define COLLECTIBLE "../assets/crackers.xpm"
 # define BCKGROUND "../assets/grass.xpm"
+# define EXIT "../assets/exit.xpm"
+# define WALL "../assets/wall.xpm"
 
 typedef struct s_win
 {
-	void	*mlx;
-	void	*mlx_win;
 	int		x;
 	int		y;
-	void	*img;
-	void	*background;
+	int		c;
 	int		win_width;
 	int		win_height;
 	int		moves;
+	void	*mlx;
+	void	*mlx_win;
+	void	*img;
+	void	*background;
+	void	*collectible;
+	void	*exit;
+	void	*wall;
 }				t_win;
 
 typedef struct s_map
 {
-	char	**map;
 	int		c;
 	int		p;
 	int		e;
@@ -53,14 +58,17 @@ typedef struct s_map
 	int		j;
 	int		x;
 	int		y;
+	char	**map;
 }				t_map;
 
 void	ft_putnbr(long nbr);
+void	create_background(void);
+void	put_items(void);
+void	collect_itens(void);
 t_win	*create_win(void);
 t_map	*create_map(void);
 int		events(int keycode);
 int		print_moves(void);
-void	create_background(void);
 char	*ft_strjoin(char *s1, char *s2);
 size_t	ft_strlen(char *s);
 int		ft_clean(char *str);
