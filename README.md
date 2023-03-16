@@ -53,5 +53,5 @@ The subject of the project can be found in [this link](https://raw.githubusercon
 
 ## Tasks
 
-- :ballot_box_with_check: Mandatory part (ongoing)
+- :ballot_box_with_check: Mandatory part
 - :white_large_square: Bonus part (ongoing)
