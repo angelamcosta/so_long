@@ -34,9 +34,9 @@ The subject of the project can be found in [this link](https://raw.githubusercon
 <details open>
 <summary> Mandatory part </summary>
 
-- :white_large_square: Game
-- :white_large_square: Graphic management
-- :white_large_square: Map
+- :ballot_box_with_check: Game
+- :ballot_box_with_check: Graphic management
+- :ballot_box_with_check: Map
 
 </details>
 
@@ -47,7 +47,7 @@ The subject of the project can be found in [this link](https://raw.githubusercon
 
 - :white_large_square: Make the player lose when they touch an enemy patrol.
 - :white_large_square: Add some sprite animation.
-- :white_large_square: Display the movement count directly on screen instead of writing it in the shell.
+- :ballot_box_with_check: Display the movement count directly on screen instead of writing it in the shell.
 
 </details>
 
