@@ -6,7 +6,7 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 15:15:07 by anlima            #+#    #+#             */
-/*   Updated: 2023/03/16 15:04:05 by anlima           ###   ########.fr       */
+/*   Updated: 2023/03/16 15:25:15 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,8 @@ void	collect_itens(void);
 t_win	*create_win(void);
 t_map	*create_map(void);
 int		events(int keycode);
-int		print_moves(void);
+int		print_moves(int i, int j);
+int		can_move(int i, int j);
 char	*ft_strjoin(char *s1, char *s2);
 size_t	ft_strlen(char *s);
 int		ft_clean(char *str);
