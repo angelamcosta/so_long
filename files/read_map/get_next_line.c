@@ -6,11 +6,13 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 10:24:04 by anlima            #+#    #+#             */
-/*   Updated: 2023/02/16 16:04:10 by anlima           ###   ########.fr       */
+/*   Updated: 2023/03/15 16:46:22 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../so_long.h"
+
+char	*get_next_line(int fd);
 
 char	*get_next_line(int fd)
 {

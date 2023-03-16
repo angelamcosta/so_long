@@ -6,11 +6,13 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 16:45:57 by anlima            #+#    #+#             */
-/*   Updated: 2023/03/14 16:48:16 by anlima           ###   ########.fr       */
+/*   Updated: 2023/03/15 16:45:16 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../so_long.h"
+
+void	ft_putnbr(long nbr);
 
 void	ft_putnbr(long nbr)
 {
