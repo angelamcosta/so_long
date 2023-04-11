@@ -6,7 +6,7 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 15:40:57 by anlima            #+#    #+#             */
-/*   Updated: 2023/03/16 14:56:07 by anlima           ###   ########.fr       */
+/*   Updated: 2023/04/11 15:25:31 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ int	is_empty(int fd)
 void	check_path(int i, int j)
 {
 	if (create_map()->map[i][j] == 'P' || create_map()->map[i][j] == 'E' ||
-			create_map()->map[i][j] == 'C' || create_map()->map[i][j] == '0')
+		create_map()->map[i][j] == 'C' || create_map()->map[i][j] == '0')
 	{
 		if (create_map()->map[i][j] == 'P')
 		{
