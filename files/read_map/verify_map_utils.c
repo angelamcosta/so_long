@@ -6,7 +6,7 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 15:40:57 by anlima            #+#    #+#             */
-/*   Updated: 2023/04/11 15:25:31 by anlima           ###   ########.fr       */
+/*   Updated: 2023/04/13 18:56:33 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	valid_chars(void)
 	check_path(create_map()->i, create_map()->j);
 	if (create_map()->c == create_map()->c_count
 		&& create_map()->e == create_map()->e_count
-		&& create_map()->p == create_map()->p_count)
+		&& create_map()->p == 1)
 		return (1);
 	return (0);
 }
@@ -71,10 +71,7 @@ void	check_path(int i, int j)
 		create_map()->map[i][j] == 'C' || create_map()->map[i][j] == '0')
 	{
 		if (create_map()->map[i][j] == 'P')
-		{
-			create_map()->map[i][j] = '0';
-			create_map()->p_count += 1;
-		}
+			create_map()->map[i][j] = 'o';
 		else if (create_map()->map[i][j] == 'E')
 		{
 			create_map()->map[i][j] = 'e';
@@ -100,10 +97,10 @@ int	is_valid(void)
 	int	j;
 	int	k;
 
-	i = 0;
-	j = ft_strlen(create_map()->map[i]);
+	i = -1;
+	j = ft_strlen(create_map()->map[0]);
 	create_map()->x = j - 1;
-	while (create_map()->map && create_map()->map[i])
+	while (create_map()->map && create_map()->map[++i])
 	{
 		k = j - 1;
 		if (!create_map()->map[i + 1])
@@ -119,7 +116,6 @@ int	is_valid(void)
 				return (0);
 			check_chars(create_map()->map[i][k], i, k);
 		}
-		i++;
 	}
 	return (valid_chars());
 }

@@ -6,7 +6,7 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 16:50:12 by anlima            #+#    #+#             */
-/*   Updated: 2023/04/11 15:31:59 by anlima           ###   ########.fr       */
+/*   Updated: 2023/04/13 14:11:54 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,6 @@ void	put_items(void)
 		k = 0;
 		while (k < j)
 		{
-			if (create_map()->map[i][k] == '1')
-				mlx_put_image_to_window(create_win()->mlx,
-					create_win()->mlx_win, create_win()->wall, k
-					* PIXEL_SIZE, i * PIXEL_SIZE);
 			if (create_map()->map[i][k] == 'c')
 				mlx_put_image_to_window(create_win()->mlx,
 					create_win()->mlx_win, create_win()->collectible, k
@@ -69,15 +65,21 @@ void	create_background(void)
 	int	j;
 
 	j = 0;
-	while (j < create_win()->win_height)
+	while (create_map()->map && create_map()->map[j])
 	{
 		i = 0;
-		while (i < create_win()->win_width)
+		while (create_map()->map && create_map()->map[j][i])
 		{
-			mlx_put_image_to_window(create_win()->mlx, create_win()->mlx_win,
-				create_win()->background, i, j);
-			i += PIXEL_SIZE;
+			if (create_map()->map[j][i] == '1')
+				mlx_put_image_to_window(create_win()->mlx,
+					create_win()->mlx_win, create_win()->wall, i
+					* PIXEL_SIZE, j * PIXEL_SIZE);
+			else
+				mlx_put_image_to_window(create_win()->mlx,
+					create_win()->mlx_win, create_win()->background, i
+					* PIXEL_SIZE, j * PIXEL_SIZE);
+			i++;
 		}
-		j += PIXEL_SIZE;
+		j++;
 	}
 }

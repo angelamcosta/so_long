@@ -6,7 +6,7 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 15:15:07 by anlima            #+#    #+#             */
-/*   Updated: 2023/03/16 15:25:15 by anlima           ###   ########.fr       */
+/*   Updated: 2023/04/13 18:56:07 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,14 @@
 # include <stdio.h>
 # include <fcntl.h>
 # include <unistd.h>
-# ifndef  BUFFER_SIZE
-#  define  BUFFER_SIZE 1
-# endif
+# define  BUFFER_SIZE 24
 # define PIXEL_SIZE 32
 # define CHAR_IMG "../assets/pidgeon1.xpm"
 # define COLLECTIBLE "../assets/crackers.xpm"
 # define BCKGROUND "../assets/grass.xpm"
 # define EXIT "../assets/exit.xpm"
 # define WALL "../assets/wall.xpm"
+# define WIN_NAME "cozy joguinho"
 
 typedef struct s_win
 {
@@ -52,7 +51,6 @@ typedef struct s_map
 	int		e;
 	int		other_chars;
 	int		c_count;
-	int		p_count;
 	int		e_count;
 	int		i;
 	int		j;
@@ -68,8 +66,8 @@ void	collect_itens(void);
 t_win	*create_win(void);
 t_map	*create_map(void);
 int		events(int keycode);
-int		print_moves(int i, int j);
-int		can_move(int i, int j);
+int		print_moves(void);
+int		moved(void);
 char	*ft_strjoin(char *s1, char *s2);
 size_t	ft_strlen(char *s);
 int		ft_clean(char *str);

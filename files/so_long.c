@@ -6,7 +6,7 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 15:14:44 by anlima            #+#    #+#             */
-/*   Updated: 2023/03/16 14:54:44 by anlima           ###   ########.fr       */
+/*   Updated: 2023/04/13 14:35:14 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	main(int argc, char **argv)
 	create_win()->win_height = PIXEL_SIZE * create_map()->y;
 	create_win()->win_width = PIXEL_SIZE * create_map()->x;
 	create_win()->mlx = mlx_init();
-	create_win()->mlx_win = mlx_new_window(create_win()->mlx, create_win()->win_width, create_win()->win_height, "cozy joguinho");
+	create_win()->mlx_win = mlx_new_window(create_win()->mlx, create_win()->win_width, create_win()->win_height, WIN_NAME);
 	create_win()->background = mlx_xpm_file_to_image(create_win()->mlx, BCKGROUND, &create_win()->x, &create_win()->y);
 	create_win()->img = mlx_xpm_file_to_image(create_win()->mlx, CHAR_IMG, &create_win()->x, &create_win()->y);
 	create_win()->collectible = mlx_xpm_file_to_image(create_win()->mlx, COLLECTIBLE, &create_win()->x, &create_win()->y);
