@@ -6,7 +6,7 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 15:14:44 by anlima            #+#    #+#             */
-/*   Updated: 2023/04/13 14:35:14 by anlima           ###   ########.fr       */
+/*   Updated: 2023/04/28 13:44:31 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ int	main(int argc, char **argv)
 	create_background();
 	put_items();
 	mlx_put_image_to_window(create_win()->mlx, create_win()->mlx_win, create_win()->img, create_map()->j * PIXEL_SIZE, create_map()->i * PIXEL_SIZE);
-	mlx_hook(create_win()->mlx_win, 2, 1L<<0, events, create_win());
+	mlx_hook(create_win()->mlx_win, 2, 1L<<0, events_keys, create_win());
+	mlx_hook(create_win()->mlx_win, 4, 1L<<2, events_buttons, create_win());
 	mlx_loop(create_win()->mlx);
 }

@@ -6,7 +6,7 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 16:03:24 by anlima            #+#    #+#             */
-/*   Updated: 2023/04/13 14:32:47 by anlima           ###   ########.fr       */
+/*   Updated: 2023/04/28 13:41:43 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 t_win	*create_win(void);
 t_map	*create_map(void);
-int		events(int keycode);
 int		print_moves(void);
 int		moved(void);
 
@@ -30,33 +29,6 @@ t_map	*create_map(void)
 	static t_map	map;
 
 	return (&map);
-}
-
-int	events(int keycode)
-{
-	if (keycode == 65307)
-	{
-		mlx_destroy_window(create_win()->mlx, create_win()->mlx_win);
-		exit(0);
-	}
-	if ((keycode == 65363 || keycode == 100)
-		&& (create_map()->map[create_map()->i][create_map()->j + 1] != '1')
-		&& print_moves())
-		create_map()->j++;
-	if ((keycode == 65361 || keycode == 97)
-		&& (create_map()->map[create_map()->i][create_map()->j - 1] != '1')
-		&& print_moves())
-		create_map()->j--;
-	if ((keycode == 65364 || keycode == 115)
-		&& (create_map()->map[create_map()->i + 1][create_map()->j] != '1')
-		&& print_moves())
-		create_map()->i++;
-	if ((keycode == 65362 || keycode == 119)
-		&& (create_map()->map[create_map()->i - 1][create_map()->j] != '1')
-		&& print_moves())
-		create_map()->i--;
-	moved();
-	return (0);
 }
 
 int	print_moves(void)
