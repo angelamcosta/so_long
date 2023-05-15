@@ -6,7 +6,7 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 14:07:24 by anlima            #+#    #+#             */
-/*   Updated: 2023/05/15 14:16:19 by anlima           ###   ########.fr       */
+/*   Updated: 2023/05/15 14:59:52 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,10 @@ void	clean_mallocs(void)
 	int	i;
 
 	i = 0;
-	while (i < create_map()->y)
+	while (create_map()->map && create_map()->map[i])
+	{
 		free_ptr(create_map()->map[i]);
+		i++;
+	}
 	free_ptr_ptr((void **)create_map()->map);
 }
