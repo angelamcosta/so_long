@@ -6,17 +6,17 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 15:40:57 by anlima            #+#    #+#             */
-/*   Updated: 2023/04/13 18:56:33 by anlima           ###   ########.fr       */
+/*   Updated: 2023/05/15 13:50:50 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../so_long.h"
 
-int		valid_chars(void);
-void	check_chars(char c, int i, int j);
-int		is_empty(int fd);
-void	check_path(int i, int j);
 int		is_valid(void);
+int		is_empty(int fd);
+int		valid_chars(void);
+void	check_path(int i, int j);
+void	check_chars(char c, int i, int j);
 
 int	valid_chars(void)
 {

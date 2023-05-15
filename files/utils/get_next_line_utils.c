@@ -6,15 +6,15 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 10:25:50 by anlima            #+#    #+#             */
-/*   Updated: 2023/03/15 16:46:03 by anlima           ###   ########.fr       */
+/*   Updated: 2023/05/15 13:50:38 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../so_long.h"
 
-char	*ft_strjoin(char *s1, char *s2);
 size_t	ft_strlen(char *s);
 int		ft_clean(char *str);
+char	*ft_strjoin(char *s1, char *s2);
 
 char	*ft_strjoin(char *s1, char *s2)
 {

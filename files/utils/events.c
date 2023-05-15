@@ -6,14 +6,14 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 13:41:28 by anlima            #+#    #+#             */
-/*   Updated: 2023/04/28 14:01:55 by anlima           ###   ########.fr       */
+/*   Updated: 2023/05/15 14:13:14 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../so_long.h"
 
+int		close_win(int keycode);
 int		events_keys(int keycode);
-int		events_buttons(int button);
 void	key_events(int i, int j, int *val, int isSum);
 
 int	events_keys(int keycode)
@@ -21,6 +21,7 @@ int	events_keys(int keycode)
 	if (keycode == 65307)
 	{
 		mlx_destroy_window(create_win()->mlx, create_win()->mlx_win);
+		clean_mallocs();
 		exit(0);
 	}
 	if (keycode == 65363 || keycode == 100)
@@ -35,21 +36,25 @@ int	events_keys(int keycode)
 	return (0);
 }
 
-int	events_buttons(int button)
+int	close_win(int keycode)
 {
-	// if (keycode == 65307)
-	// {
-	// 	mlx_destroy_window(create_win()->mlx, create_win()->mlx_win);
-	// 	exit(0);
-	// }
-	printf("%i", button);
+	(void)(keycode);
+	mlx_destroy_window(create_win()->mlx, create_win()->mlx_win);
+	clean_mallocs();
+	exit (0);
 	return (0);
 }
 
 void	key_events(int i, int j, int *val, int isSum)
 {
-	if ((create_map()->map[i][j] != '1') && print_moves() && isSum)
+	if ((create_map()->map[i][j] != '1') && isSum)
+	{
+		print_moves();
 		val[0]++;
-	else if ((create_map()->map[i][j] != '1') && print_moves() && !isSum)
+	}
+	else if ((create_map()->map[i][j] != '1') && !isSum)
+	{
+		print_moves();
 		val[0]--;
+	}
 }

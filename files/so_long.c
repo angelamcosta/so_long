@@ -6,7 +6,7 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 15:14:44 by anlima            #+#    #+#             */
-/*   Updated: 2023/04/28 13:44:31 by anlima           ###   ########.fr       */
+/*   Updated: 2023/05/15 14:05:18 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,29 @@
 
 int	main(int argc, char **argv)
 {
+	t_win	*win;
+
 	if (!verify_map(argv[1]) || argc != 2)
-	{
-		write(1, "Args invalidos\n", 15);
-		return (0);
-	}
+		return (write(1, "Args invalidos\n", 15));
 	create_win()->win_height = PIXEL_SIZE * create_map()->y;
 	create_win()->win_width = PIXEL_SIZE * create_map()->x;
-	create_win()->mlx = mlx_init();
-	create_win()->mlx_win = mlx_new_window(create_win()->mlx, create_win()->win_width, create_win()->win_height, WIN_NAME);
-	create_win()->background = mlx_xpm_file_to_image(create_win()->mlx, BCKGROUND, &create_win()->x, &create_win()->y);
-	create_win()->img = mlx_xpm_file_to_image(create_win()->mlx, CHAR_IMG, &create_win()->x, &create_win()->y);
-	create_win()->collectible = mlx_xpm_file_to_image(create_win()->mlx, COLLECTIBLE, &create_win()->x, &create_win()->y);
-	create_win()->exit = mlx_xpm_file_to_image(create_win()->mlx, EXIT, &create_win()->x, &create_win()->y);
-	create_win()->wall = mlx_xpm_file_to_image(create_win()->mlx, WALL, &create_win()->x, &create_win()->y);
+	win = create_win();
+	win->mlx = mlx_init();
+	win->mlx_win = mlx_new_window(win->mlx, win->win_width,
+			win->win_height, WIN_NAME);
+	win->background = mlx_xpm_file_to_image(win->mlx, BCKGROUND,
+			&win->x, &win->y);
+	win->img = mlx_xpm_file_to_image(win->mlx, CHAR_IMG,
+			&win->x, &win->y);
+	win->collectible = mlx_xpm_file_to_image(win->mlx,
+			COLLECTIBLE, &win->x, &win->y);
+	win->exit = mlx_xpm_file_to_image(win->mlx, EXIT, &win->x, &win->y);
+	win->wall = mlx_xpm_file_to_image(win->mlx, WALL, &win->x, &win->y);
 	create_background();
 	put_items();
-	mlx_put_image_to_window(create_win()->mlx, create_win()->mlx_win, create_win()->img, create_map()->j * PIXEL_SIZE, create_map()->i * PIXEL_SIZE);
-	mlx_hook(create_win()->mlx_win, 2, 1L<<0, events_keys, create_win());
-	mlx_hook(create_win()->mlx_win, 4, 1L<<2, events_buttons, create_win());
-	mlx_loop(create_win()->mlx);
+	mlx_put_image_to_window(win->mlx, win->mlx_win, win->img,
+		create_map()->j * PIXEL_SIZE, create_map()->i * PIXEL_SIZE);
+	mlx_hook(win->mlx_win, 2, 1L << 0, events_keys, win);
+	mlx_hook(win->mlx_win, 17, 1L << 0, close_win, win);
+	mlx_loop(win->mlx);
 }

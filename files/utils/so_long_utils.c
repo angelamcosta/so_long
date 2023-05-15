@@ -6,16 +6,16 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 16:03:24 by anlima            #+#    #+#             */
-/*   Updated: 2023/04/28 13:41:43 by anlima           ###   ########.fr       */
+/*   Updated: 2023/05/15 13:50:32 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../so_long.h"
 
+int		moved(void);
 t_win	*create_win(void);
 t_map	*create_map(void);
 int		print_moves(void);
-int		moved(void);
 
 t_win	*create_win(void)
 {

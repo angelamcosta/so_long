@@ -6,7 +6,7 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 15:15:07 by anlima            #+#    #+#             */
-/*   Updated: 2023/04/28 14:01:31 by anlima           ###   ########.fr       */
+/*   Updated: 2023/05/15 14:12:47 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,9 @@ typedef struct s_map
 	char	**map;
 }				t_map;
 
+void	free_ptr(void *ptr);
+void	clean_mallocs(void);
+void	free_ptr_ptr(void **ptr);
 void	ft_putnbr(long nbr);
 void	create_background(void);
 void	put_items(void);
@@ -66,7 +69,7 @@ void	collect_itens(void);
 t_win	*create_win(void);
 t_map	*create_map(void);
 int		events_keys(int keycode);
-int		events_buttons(int button);
+int		close_win(int keycode);
 void	key_events(int i, int j, int *val, int isSum);
 int		print_moves(void);
 int		moved(void);
