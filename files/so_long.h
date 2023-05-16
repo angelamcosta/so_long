@@ -59,9 +59,9 @@ typedef struct s_map
 	char	**map;
 }				t_map;
 
-void	free_ptr(void *ptr);
 void	clean_mallocs(void);
-void	free_ptr_ptr(void **ptr);
+void	destroy_images(void);
+void	destroy_display(void);
 void	ft_putnbr(long nbr);
 void	create_background(void);
 void	put_items(void);
