@@ -1,4 +1,4 @@
-# :joystick: So Long
+# 🕹️ So Long
 
 <div align=center>
 
@@ -51,6 +51,16 @@ You must create a basic 2D game in which a dolphin escapes Earth after eating so
 - If any misconfiguration of any kind is encountered in the file, the program must exit in a clean way, and return "Error\n" followed by an explicit error message of your choice.
 
 ## 🚀 Usage
+
+To compile the game, navigate to the files/ directory and run the following command:
+
+```shell
+make
+```
+
+This will generate an executable named so_long.
+
+To launch the game, use the following command:
 
 ```shell
 ./so_long map.ber
