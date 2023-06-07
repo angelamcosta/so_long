@@ -1,4 +1,4 @@
-# 🕹️ So Long
+# <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Alien%20Monster.png" alt="Alien Monster" width="35" height="35" /> So Long
 
 <div align=center>
 
