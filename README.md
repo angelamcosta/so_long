@@ -4,7 +4,6 @@
 
   ![badge](https://raw.githubusercontent.com/angelamcosta/angelamcosta/main/42_badges/so_longe.png)
 
-  [![anlima's 42 so_long Score](https://badge42.vercel.app/api/v2/cl9oe5ogt00110fm6h34z9iu9/project/2986315)](https://github.com/JaeSeoKim/badge42)
 </div>
 
 <div align=center>
